@@ -26,21 +26,21 @@ function changeMe(arr) {
     for (i = 0; i < arr.length; i++){
       var objProfile = {};
       
-      objProfile.firstName = arr[i][0]
-      objProfile.lastName = arr[i][1]
-      objProfile.genderName = arr[i][2]
-      objProfile.age = (!arr[i][3] || !arr[i][3] > year)? 'Invalid Birth Year': year - arr[i][3]
+      objProfile.firstName = arr[i][0];
+      objProfile.lastName = arr[i][1];
+      objProfile.genderName = arr[i][2];
+      objProfile.age = (!arr[i][3] || arr[i][3] > year)? 'Invalid Birth Year': year - arr[i][3];
       
-      arrResult.push(objProfile)
+      arrResult.push(objProfile);
       
       // avoid using 2nd for loop and extra array to contain object data using the below lines, comment out line 24, 34, 41-44
-      // console.log(`${i+1}. ${objProfile.firstName} ${objProfile.lastName}:`)
-      // console.log(objProfile)
+      // console.log(`${i+1}. ${objProfile.firstName} ${objProfile.lastName}:`);
+      // console.log(objProfile);
     }
 
     for (j = 0; j < arrResult.length; j++){
-      console.log(`${j+1}. ${arrResult[j].firstName} ${arrResult[j].lastName}:`)
-      console.log(arrResult[j])
+      console.log(`${j+1}. ${arrResult[j].firstName} ${arrResult[j].lastName}:`);
+      console.log(arrResult[j]);
     }
   }
   
